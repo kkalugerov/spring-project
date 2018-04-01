@@ -10,6 +10,7 @@ import zealot.springframework.dependencyinjection.controllers.MyController;
 import zealot.springframework.dependencyinjection.controllers.PropertyInjectedController;
 import zealot.springframework.dependencyinjection.controllers.GetterInjectedController;
 import zealot.springframework.dependencyinjection.example_beans.FakeDAO;
+import zealot.springframework.dependencyinjection.example_beans.FakeJmsBroker;
 
 @SpringBootApplication
 @Configuration
@@ -26,6 +27,10 @@ public class DependencyInjectionApplication {
         FakeDAO fakeDAO = applicationContext.getBean(FakeDAO.class);
 
         System.out.println(fakeDAO);
+
+        FakeJmsBroker fakeJmsBroker = applicationContext.getBean(FakeJmsBroker.class);
+
+        System.out.println(fakeJmsBroker.getUsername());
 
 //        System.out.println(myController.hello());
 //        System.out.println(applicationContext.getBean(PropertyInjectedController.class).sayHello());
