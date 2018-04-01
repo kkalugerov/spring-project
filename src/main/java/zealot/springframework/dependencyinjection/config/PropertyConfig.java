@@ -12,15 +12,7 @@ import zealot.springframework.dependencyinjection.example_beans.FakeDAO;
 import zealot.springframework.dependencyinjection.example_beans.FakeJmsBroker;
 
 @Configuration
-@PropertySources({
-        @PropertySource("classpath:fakedao.properties"),
-        @PropertySource("classpath:jms.properties")
-})
-//@PropertySource({"classpath:fakedao.properties","classpath:jms.properties}"})
 public class PropertyConfig {
-
-//    @Autowired
-//    Environment environment;
 
     @Value("${fakedao.user}")
     String user;
@@ -44,7 +36,6 @@ public class PropertyConfig {
     public FakeDAO fakeDAOSource(){
         FakeDAO fakeDAO = new FakeDAO();
         fakeDAO.setUrl(user);
-//        fakeDAO.setUrl(environment.getProperty("USER"));
         fakeDAO.setPassword(passwd);
         fakeDAO.setUrl(url);
         return fakeDAO;
@@ -59,11 +50,5 @@ public class PropertyConfig {
         return fakeJmsBroker;
     }
 
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties(){
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer =
-                new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
 
 }
