@@ -1,0 +1,4 @@
+jms:
+  username: JMS
+  password: JMSPASS
+  url: url@JMS.net
