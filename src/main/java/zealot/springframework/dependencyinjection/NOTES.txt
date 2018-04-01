@@ -1,0 +1,2 @@
+In service implementation classes always have to create Dependency Injection in case
+to use Interfaces which define methods.
