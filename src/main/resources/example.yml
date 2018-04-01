@@ -1,0 +1,37 @@
+# use to describe data structures
+
+name: Zealot
+
+names: #list of names
+    - Zealot
+    - Zealot2
+    - Zealot3
+
+pound_sign: "#"
+
+book:
+    author: Zealot Type
+    publisher: random house
+
+truth: yes
+
+another_truth: True
+
+more_true: true
+
+false: no #No, false, False
+
+string_val: "This is test"
+
+colon_string: "test: one two three"
+
+include_new_lines: |
+  line1
+  line2
+  line3
+
+ignore_new_lines: >
+  this is
+  just one long
+  string
+
