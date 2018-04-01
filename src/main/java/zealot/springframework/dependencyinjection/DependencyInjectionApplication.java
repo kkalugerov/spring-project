@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import zealot.springframework.dependencyinjection.controllers.ConstructorInjectedController;
 import zealot.springframework.dependencyinjection.controllers.MyController;
 import zealot.springframework.dependencyinjection.controllers.PropertyInjectedController;
@@ -11,6 +12,7 @@ import zealot.springframework.dependencyinjection.controllers.GetterInjectedCont
 import zealot.springframework.dependencyinjection.example_beans.FakeDAO;
 
 @SpringBootApplication
+@Configuration
 //overrode the default behavior of spring boot
 //@ComponentScan(basePackages = {"zealot.springframework.dependencyinjection.services",
 //		"zealot.springframework.dependencyinjection"})
